@@ -20,6 +20,10 @@ public class KeyboardInputController : InputController {
         bool fireButtonDown = Input.GetButton(inputData.buttonB);
         shipController.SetFire(fireButtonDown);
 
+        if (Input.GetButtonDown(inputData.buttonA) || Input.GetButtonDown(inputData.buttonB)) {
+            QuickDrawManager.instance.Notify(playerNum);
+        }
+
     }
 
     public void SetKeyboardType(InputData.KeyboardInputType _keyboardInputType) {

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class InputController : MonoBehaviour {
     
+    [SerializeField]
+    protected int playerNum;
+
     protected ShipController shipController;
 
     protected InputData inputData;
@@ -44,7 +47,7 @@ public class InputController : MonoBehaviour {
             }
             iData.horizontal = "Horizontal_" + suffix;
             iData.vertical = "Vertical_" + suffix;
-            iData.buttonA = "ButtonFire_" + suffix;
+            iData.buttonA = "ButtonA_" + suffix;
             iData.buttonB = "ButtonB_" + suffix;
             return iData;
         }

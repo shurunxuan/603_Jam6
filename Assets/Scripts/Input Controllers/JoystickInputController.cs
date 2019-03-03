@@ -20,6 +20,10 @@ public class JoystickInputController : InputController {
         bool fireButtonDown = Input.GetButton(inputData.buttonB);
         shipController.SetFire(fireButtonDown);
 
+        if (Input.GetButtonDown(inputData.buttonA) || Input.GetButtonDown(inputData.buttonB)) {
+            QuickDrawManager.instance.Notify(playerNum);
+        }
+
     }
 
     public void SetJoystickNum(int _joyNum) {
