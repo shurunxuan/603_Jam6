@@ -9,13 +9,20 @@ public abstract class ShipController : MonoBehaviour {
     protected bool isFiring = false;
 
     public GameObject Weapon;
-    protected GameObject weaponInstance;
+    public Transform[] WeaponSlots;
+
+    protected GameObject[] weaponInstances;
     protected virtual void Awake() {
         rigidbody = GetComponent<Rigidbody2D>();
 
-        weaponInstance = Instantiate(Weapon, transform);
-        
-        weaponInstance.SetActive(false);
+        weaponInstances = new GameObject[WeaponSlots.Length];
+        for (int i = 0; i < WeaponSlots.Length; ++i)
+        {
+            weaponInstances[i] = Instantiate(Weapon, WeaponSlots[i]);
+            weaponInstances[i].transform.localPosition = Vector3.zero;
+            weaponInstances[i].transform.localRotation = Quaternion.identity;
+            weaponInstances[i].SetActive(false);
+        }
     }
 
     public void SetAxisVector(Vector2 _axisVector) {
