@@ -6,6 +6,7 @@ public abstract class ShipController : MonoBehaviour {
     
     protected new Rigidbody2D rigidbody;
     protected Vector2 axisVector;
+    protected Vector2 axisVectorHeavy;
     protected bool aDown = false;
     protected bool bDown = false;
     protected InputController.InputData.Type inputType;
@@ -16,6 +17,11 @@ public abstract class ShipController : MonoBehaviour {
 
     public void SetAxisVector(Vector2 _axisVector) {
         axisVector = _axisVector;
+    }
+
+    public void SetAxisVectorHeavy(Vector2 _axisVectorHeavy)
+    {
+        axisVectorHeavy = _axisVectorHeavy;
     }
 
     public void SetA(bool _aDown) {
