@@ -21,9 +21,15 @@ public class DefaultShipController : ShipController {
         rigidbody.MoveRotation(rigidbody.rotation + axisVector.x * -rotationSpeed * Time.fixedDeltaTime);
 
         // Thrust
-        rigidbody.AddForce(transform.up * axisVector.y * thrustStrength * Time.fixedDeltaTime);
+        float thrustScale = 0;
+        if (InputController.InputData.Type.Joystick == inputType) {
+            thrustScale = aDown ? 1 : 0;
+        } else if (InputController.InputData.Type.Keyboard == inputType) {
+            thrustScale = Mathf.Clamp01(axisVector.y);
+        }
+        rigidbody.AddForce(transform.up * thrustScale * thrustStrength * Time.fixedDeltaTime);
 
-        if (isFiring) {
+        if (bDown) {
             Debug.Log("pew pew");
         }
 

@@ -17,8 +17,11 @@ public class JoystickInputController : InputController {
         Vector2 axisVector = new Vector2(Input.GetAxisRaw(inputData.horizontal), Input.GetButton(inputData.buttonA) ? 1 : 0);
         shipController.SetAxisVector(axisVector);
 
-        bool fireButtonDown = Input.GetButton(inputData.buttonB);
-        shipController.SetFire(fireButtonDown);
+        bool aDown = Input.GetButton(inputData.buttonA);
+        shipController.SetA(aDown);
+
+        bool bDown = Input.GetButton(inputData.buttonB);
+        shipController.SetB(bDown);
 
         if (Input.GetButtonDown(inputData.buttonA) || Input.GetButtonDown(inputData.buttonB)) {
             QuickDrawManager.instance.Notify(playerNum);
@@ -30,6 +33,7 @@ public class JoystickInputController : InputController {
         joyNum = _joyNum;
         inputData = InputData.CreateJoystick(_joyNum);
         inputDataExternallySet = true;
+        shipController.SetInputType(inputData.type);
     }
 
 }

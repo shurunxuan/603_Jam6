@@ -341,6 +341,7 @@ GameObject:
   - component: {fileID: 996298955}
   - component: {fileID: 996298953}
   - component: {fileID: 996298952}
+  - component: {fileID: 996298956}
   m_Layer: 0
   m_Name: DefaultShip
   m_TagString: Player
@@ -360,7 +361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 0
-  keyboardInputType: 0
+  keyboardInputType: 1
 --- !u!114 &996298953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,6 +409,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &996298956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 996298951}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99016b160ea6eb146abc575c6fdd3d7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNum: 0
+  joyNum: 2
 --- !u!1 &1535852992
 GameObject:
   m_ObjectHideFlags: 0
