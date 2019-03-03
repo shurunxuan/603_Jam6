@@ -23,9 +23,10 @@ public class DefaultShipController : ShipController {
         // Thrust
         rigidbody.AddForce(transform.up * axisVector.y * thrustStrength * Time.fixedDeltaTime);
 
-        if (isFiring) {
-            Debug.Log("pew pew");
-        }
+        weaponInstance.SetActive(isFiring);
+        // if (isFiring) {
+        //     Debug.Log("pew pew");
+        // }
 
     }
 }

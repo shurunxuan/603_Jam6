@@ -372,6 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17db7fc6481e4a048ac36aeb2ef7f383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Weapon: {fileID: 1692849487360604, guid: 8a0e5ff6026910748893ad801c50e41f, type: 2}
   rotationSpeed: 200
   thrustStrength: 250
 --- !u!4 &996298954
