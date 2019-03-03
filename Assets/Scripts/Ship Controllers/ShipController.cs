@@ -10,6 +10,7 @@ public abstract class ShipController : MonoBehaviour {
     protected bool bDown = false;
     protected InputController.InputData.Type inputType;
 
+    public int HitPoint;
     public GameObject Weapon;
     public Transform[] WeaponSlots;
 
@@ -41,6 +42,16 @@ public abstract class ShipController : MonoBehaviour {
 
     public void SetInputType(InputController.InputData.Type _inputType) {
         inputType = _inputType;
+    }
+
+    void DamageDealed(int damage)
+    {
+        HitPoint -= damage;
+        if (HitPoint <= 0)
+        {
+            Debug.Log(name + " Died!");
+            Destroy(gameObject);
+        }
     }
 
 }

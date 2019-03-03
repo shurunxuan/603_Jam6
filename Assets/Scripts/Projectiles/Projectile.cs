@@ -9,6 +9,8 @@ public class Projectile : MonoBehaviour
 
 	public float LifeTime;
 
+	public int Damage;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -17,5 +19,14 @@ public class Projectile : MonoBehaviour
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	void OnTriggerEnter2D(Collider2D col)
+	{
+		if (col.gameObject != shooter.transform.root.gameObject)
+		{
+			col.gameObject.SendMessage("DamageDealed", Damage);
+			Destroy(gameObject);
+		}
 	}
 }
