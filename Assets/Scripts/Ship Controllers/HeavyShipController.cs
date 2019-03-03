@@ -54,19 +54,19 @@ public class HeavyShipController : ShipController
             thrust = 5;
         }
 
-        //Vector2 moveDirection = rigidbody.velocity;
-        //if (moveDirection != Vector2.zero)
-        //{
-        //    float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
-        //    rigidbody.MoveRotation(angle);
-        //    //transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        //}
+        Vector2 moveDirection = axisVector.normalized;
+        if (moveDirection != Vector2.zero)
+        {
+            float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg + 270;
+            rigidbody.MoveRotation(angle);
+            //transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
 
 
 
 
-        rigidbody.AddForce(transform.up * thrustScaleY * thrustStrength * Time.fixedDeltaTime * thrust);
-        rigidbody.AddForce(transform.right * thrustScaleX * thrustStrength * Time.fixedDeltaTime * thrust);
+        rigidbody.AddForce(Vector3.up * thrustScaleY * thrustStrength * Time.fixedDeltaTime * thrust);
+        rigidbody.AddForce(Vector3.right * thrustScaleX * thrustStrength * Time.fixedDeltaTime * thrust);
 
     }
 }
