@@ -8,28 +8,16 @@ public class JoystickInputController : InputController {
     private int joyNum;
 
 	// Use this for initialization
-	void Start () {
+	protected override void Start () {
+        base.Start();
         if (!inputDataExternallySet) SetJoystickNum(joyNum);
-    }
-
-    private void Update() {
-
-        Vector2 axisVector = new Vector2(Input.GetAxisRaw(inputData.horizontal), Input.GetButton(inputData.buttonA) ? 1 : 0);
-        shipController.SetAxisVector(axisVector);
-
-        bool fireButtonDown = Input.GetButton(inputData.buttonB);
-        shipController.SetFire(fireButtonDown);
-
-        if (Input.GetButtonDown(inputData.buttonA) || Input.GetButtonDown(inputData.buttonB)) {
-            QuickDrawManager.instance.Notify(playerNum);
-        }
-
     }
 
     public void SetJoystickNum(int _joyNum) {
         joyNum = _joyNum;
         inputData = InputData.CreateJoystick(_joyNum);
         inputDataExternallySet = true;
+        shipController.SetInputType(inputData.type);
     }
 
 }
