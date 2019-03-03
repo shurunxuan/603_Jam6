@@ -1,11 +1,40 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public static GameManager instance {
+        get;
+        private set;
+    }
+
+    public Dictionary<int, InputController> players = new Dictionary<int, InputController>();
+
+    public void AddPlayer(InputController _inputController) {
+        players.Add(_inputController.playerNum, _inputController);
+        Debug.Log("Player " + _inputController.playerNum + " joined");
+    }
+
+    public InputController GetPlayer(int _playerNum) {
+        InputController player;
+        if (players.TryGetValue(_playerNum, out player)) {
+            return player;
+        }
+        return null;
+    }
+
+    public List<InputController> GetAllPlayers() {
+        return players.Values.ToList();
+    }
+
+    private void Awake() {
+        instance = this;
+    }
+
+    // Use this for initialization
+    void Start () {
         StartCoroutine(GameLoop());
 	}
 

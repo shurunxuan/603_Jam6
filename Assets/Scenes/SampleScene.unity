@@ -329,7 +329,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d924e012ee3a5644088ce084a173f053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenQuickDraws: -1
+  timeBetweenQuickDraws: 5
+  rewardPrefabs:
+  - {fileID: 1194619037291262, guid: e431e4ec91dba94468be4ee5c52262c0, type: 2}
 --- !u!1 &996298951
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,8 +362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf26a1fb8c5f3d44bf1fd1b236c1c9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNum: 0
-  keyboardInputType: 1
+  keyboardInputType: 0
 --- !u!114 &996298953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,8 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99016b160ea6eb146abc575c6fdd3d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNum: 0
-  joyNum: 2
+  joyNum: 1
 --- !u!1 &1535852992
 GameObject:
   m_ObjectHideFlags: 0
