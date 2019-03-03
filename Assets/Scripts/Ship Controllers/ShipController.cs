@@ -8,6 +8,7 @@ public abstract class ShipController : MonoBehaviour {
     protected Vector2 axisVector;
     protected bool isFiring = false;
 
+    public int HitPoint;
     public GameObject Weapon;
     public Transform[] WeaponSlots;
 
@@ -31,6 +32,16 @@ public abstract class ShipController : MonoBehaviour {
 
     public void SetFire(bool _isFiring) {
         isFiring = _isFiring;
+    }
+
+    void DamageDealed(int damage)
+    {
+        HitPoint -= damage;
+        if (HitPoint <= 0)
+        {
+            Debug.Log(name + " Died!");
+            Destroy(gameObject);
+        }
     }
 
 }

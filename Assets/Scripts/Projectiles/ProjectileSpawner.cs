@@ -24,7 +24,7 @@ public class ProjectileSpawner : MonoBehaviour {
 			GameObject newProjectile = Instantiate(ProjectilePrefab);
 
 			Projectile projectile = newProjectile.GetComponent<Projectile>();
-
+			
 			Destroy(newProjectile, projectile.LifeTime);
 
 			projectile.shooter = gameObject;

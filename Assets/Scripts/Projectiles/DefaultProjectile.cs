@@ -14,6 +14,7 @@ public class DefaultProjectile : Projectile
     {
         direction = shooter.transform.up;
         transform.position = shooter.transform.position;
+        transform.rotation = shooter.transform.rotation;
     }
 
     // Update is called once per frame
