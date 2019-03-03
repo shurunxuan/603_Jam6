@@ -14,13 +14,16 @@ public class InputController : MonoBehaviour {
         protected set;
     }
 
-    protected ShipController shipController;
+    public ShipController shipController {
+        get;
+        protected set;
+    }
 
     protected InputData inputData;
     protected bool inputDataExternallySet = false;
 
     protected virtual void Awake() {
-        shipController = GetComponent<ShipController>();
+        shipController = GetComponentInChildren<ShipController>();
     }
 
     protected virtual void Start() {
@@ -41,6 +44,23 @@ public class InputController : MonoBehaviour {
         if (Input.GetButtonDown(inputData.buttonA) || Input.GetButtonDown(inputData.buttonB)) {
             QuickDrawManager.instance.Notify(this);
         }
+
+    }
+
+    public void SetShip(GameObject _shipPrefab) {
+
+        GameObject weaponPrefab = shipController.Weapon;
+        Vector3 pos = shipController.transform.localPosition;
+        Quaternion rot = shipController.transform.localRotation;
+
+        Destroy(shipController.gameObject);
+
+        GameObject shipObj = Instantiate(_shipPrefab, this.transform);
+        shipController = shipObj.GetComponent<ShipController>();
+
+        shipObj.transform.localPosition = pos;
+        shipObj.transform.localRotation = rot;
+        shipController.Weapon = weaponPrefab;
 
     }
 

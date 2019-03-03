@@ -9,52 +9,51 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1680188554461206}
+  m_RootGameObject: {fileID: 1098015486763970}
   m_IsPrefabAsset: 1
---- !u!1 &1680188554461206
+--- !u!1 &1098015486763970
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 224100156427052272}
-  - component: {fileID: 222924421443058702}
-  - component: {fileID: 114877918505745206}
-  - component: {fileID: 114664514365267884}
+  - component: {fileID: 224508401078688752}
+  - component: {fileID: 222144229227833320}
+  - component: {fileID: 114262991897477584}
+  - component: {fileID: 114185692551763116}
   m_Layer: 5
-  m_Name: Test Weapon Reward
+  m_Name: Test Ship Reward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114664514365267884
+--- !u!114 &114185692551763116
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1680188554461206}
+  m_GameObject: {fileID: 1098015486763970}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8865700f942f5b441a4a2ec4188d7b11, type: 3}
+  m_Script: {fileID: 11500000, guid: f001095358f46e442bfcf8ccaff25fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 1692849487360604, guid: 8a0e5ff6026910748893ad801c50e41f,
-    type: 2}
---- !u!114 &114877918505745206
+  shipPrefab: {fileID: 1666446319276150, guid: dafc46b41ea7fb348a444f572f75ad6b, type: 2}
+--- !u!114 &114262991897477584
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1680188554461206}
+  m_GameObject: {fileID: 1098015486763970}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.09069872, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -69,19 +68,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!222 &222924421443058702
+--- !u!222 &222144229227833320
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1680188554461206}
+  m_GameObject: {fileID: 1098015486763970}
   m_CullTransparentMesh: 0
---- !u!224 &224100156427052272
+--- !u!224 &224508401078688752
 RectTransform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1680188554461206}
+  m_GameObject: {fileID: 1098015486763970}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}

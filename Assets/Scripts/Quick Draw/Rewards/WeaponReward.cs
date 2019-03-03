@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class WeaponReward : Reward {
 
+    public GameObject weaponPrefab;
+
     public override void ApplyTo(InputController _player) {
-        Debug.Log("Weapon reward applied to Player" + _player.playerNum);
+        _player.GetComponentInChildren<ShipController>().Weapon = weaponPrefab;
         Destroy(this.gameObject);
     }
 

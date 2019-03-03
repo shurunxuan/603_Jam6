@@ -63,7 +63,7 @@ public class QuickDrawManager : MonoBehaviour {
         // Create rewards
         rewards = new List<Reward>();
         for (int i = 0; i < 1; i++) { // Just creating one for now
-            Reward r = Instantiate(rewardPrefabs[0]).GetComponent<Reward>();
+            Reward r = Instantiate(rewardPrefabs[Random.Range(0, rewardPrefabs.Length)]).GetComponent<Reward>();
             rewards.Add(r);
         }
         quickDrawCavas.SetRewards(rewards);

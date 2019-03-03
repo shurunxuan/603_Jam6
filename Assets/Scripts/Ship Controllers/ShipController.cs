@@ -12,21 +12,40 @@ public abstract class ShipController : MonoBehaviour {
     protected InputController.InputData.Type inputType;
 
     public int HitPoint;
-    public GameObject Weapon;
+
+    [SerializeField]
+    private GameObject weapon;
+    public GameObject Weapon {
+        get { return weapon; }
+        set {
+            weapon = value;
+            SetWeapon();
+        }
+    }
     public Transform[] WeaponSlots;
 
     protected GameObject[] weaponInstances;
     protected virtual void Awake() {
         rigidbody = GetComponent<Rigidbody2D>();
+        SetWeapon();
+    }
 
+    public void SetWeapon() {
+
+        if (weaponInstances != null) {
+            foreach (GameObject obj in weaponInstances) {
+                Destroy(obj);
+            }
+        }
         weaponInstances = new GameObject[WeaponSlots.Length];
-        for (int i = 0; i < WeaponSlots.Length; ++i)
-        {
+
+        for (int i = 0; i < WeaponSlots.Length; ++i) {
             weaponInstances[i] = Instantiate(Weapon, WeaponSlots[i]);
             weaponInstances[i].transform.localPosition = Vector3.zero;
             weaponInstances[i].transform.localRotation = Quaternion.identity;
             weaponInstances[i].SetActive(false);
         }
+
     }
 
     public void SetAxisVector(Vector2 _axisVector) {

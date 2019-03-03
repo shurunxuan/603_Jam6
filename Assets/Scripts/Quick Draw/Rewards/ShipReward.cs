@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class ShipReward : Reward {
 
+    public GameObject shipPrefab;
+
     public override void ApplyTo(InputController _player) {
-        Debug.Log("Ship reward applied to Player" + _player.playerNum);
+        _player.SetShip(shipPrefab);
         Destroy(this.gameObject);
     }
 
