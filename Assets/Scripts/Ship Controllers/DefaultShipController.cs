@@ -28,9 +28,9 @@ public class DefaultShipController : ShipController {
             thrustScale = Mathf.Clamp01(axisVector.y);
         }
         rigidbody.AddForce(transform.up * thrustScale * thrustStrength * Time.fixedDeltaTime);
-
-        if (bDown) {
-            Debug.Log("pew pew");
+        
+        foreach (var weapon in weaponInstances) {
+            weapon.SetActive(bDown);
         }
 
     }

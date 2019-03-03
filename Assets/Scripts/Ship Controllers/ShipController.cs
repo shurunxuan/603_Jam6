@@ -11,8 +11,22 @@ public abstract class ShipController : MonoBehaviour {
     protected bool bDown = false;
     protected InputController.InputData.Type inputType;
 
+    public int HitPoint;
+    public GameObject Weapon;
+    public Transform[] WeaponSlots;
+
+    protected GameObject[] weaponInstances;
     protected virtual void Awake() {
         rigidbody = GetComponent<Rigidbody2D>();
+
+        weaponInstances = new GameObject[WeaponSlots.Length];
+        for (int i = 0; i < WeaponSlots.Length; ++i)
+        {
+            weaponInstances[i] = Instantiate(Weapon, WeaponSlots[i]);
+            weaponInstances[i].transform.localPosition = Vector3.zero;
+            weaponInstances[i].transform.localRotation = Quaternion.identity;
+            weaponInstances[i].SetActive(false);
+        }
     }
 
     public void SetAxisVector(Vector2 _axisVector) {
@@ -34,6 +48,16 @@ public abstract class ShipController : MonoBehaviour {
 
     public void SetInputType(InputController.InputData.Type _inputType) {
         inputType = _inputType;
+    }
+
+    void DamageDealed(int damage)
+    {
+        HitPoint -= damage;
+        if (HitPoint <= 0)
+        {
+            Debug.Log(name + " Died!");
+            Destroy(gameObject);
+        }
     }
 
 }

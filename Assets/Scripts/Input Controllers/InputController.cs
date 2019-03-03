@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class InputController : MonoBehaviour {
     
-    [SerializeField]
-    protected int playerNum;
+    public int playerNum {
+        get;
+        protected set;
+    }
+    
+    public Color playerColor {
+        get;
+        protected set;
+    }
 
     protected ShipController shipController;
 
@@ -14,6 +21,27 @@ public class InputController : MonoBehaviour {
 
     protected virtual void Awake() {
         shipController = GetComponent<ShipController>();
+    }
+
+    protected virtual void Start() {
+        GameManager.instance.AddPlayer(this);
+    }
+
+    protected virtual void Update() {
+
+        Vector2 axisVector = new Vector2(Input.GetAxisRaw(inputData.horizontal), Input.GetAxisRaw(inputData.vertical));
+        shipController.SetAxisVector(axisVector);
+
+        bool aDown = Input.GetButton(inputData.buttonA);
+        shipController.SetA(aDown);
+
+        bool bDown = Input.GetButton(inputData.buttonB);
+        shipController.SetB(bDown);
+
+        if (Input.GetButtonDown(inputData.buttonA) || Input.GetButtonDown(inputData.buttonB)) {
+            QuickDrawManager.instance.Notify(this);
+        }
+
     }
 
     public class InputData {
