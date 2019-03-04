@@ -112,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Interval: 0.2
   Offset: 0
-  ProjectilePrefab: {fileID: 1754263881193942, guid: f5d196e0a3818cf42a90e843f132ab39,
+  ProjectilePrefab: {fileID: 1441375190790948, guid: f3d40735ca5759940836deca524c55eb,
     type: 2}
 --- !u!114 &114541568838511220
 MonoBehaviour:
@@ -127,5 +127,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Interval: 0.2
   Offset: 0.1
-  ProjectilePrefab: {fileID: 1754263881193942, guid: f5d196e0a3818cf42a90e843f132ab39,
+  ProjectilePrefab: {fileID: 1441375190790948, guid: f3d40735ca5759940836deca524c55eb,
     type: 2}

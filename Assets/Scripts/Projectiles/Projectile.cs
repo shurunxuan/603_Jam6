@@ -23,6 +23,9 @@ public class Projectile : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
+		if (col.gameObject == null) return;
+		if (shooter == null) return;
+
 		if (col.gameObject != shooter.transform.root.GetComponent<InputController>().shipController.gameObject)
 		{
 			col.gameObject.SendMessage("DamageDealed", Damage);

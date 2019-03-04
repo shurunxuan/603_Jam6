@@ -272,13 +272,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quickDrawCavas: {fileID: 1283135608}
-  timeBetweenQuickDraws: -1
+  timeBetweenQuickDraws: 5
   rewardPrefabs:
   - {fileID: 1837420274972906, guid: 4a206e02cb945ec47bb447ebfdac6b80, type: 2}
   - {fileID: 1680188554461206, guid: f7cf14a2bf82e764aa8ad9321bea5975, type: 2}
   - {fileID: 1559723385241524, guid: cbc200e5f69ad514fbf84f16cf47495d, type: 2}
   - {fileID: 1098015486763970, guid: 1b580f401bad9b14c818babbb3373469, type: 2}
   - {fileID: 1122083223219516, guid: 0855499a8c7a0cd44a1e7b5460a10a05, type: 2}
+  - {fileID: 1680188554461206, guid: b3a3977e6cbe9f045b3bd484c75d7a64, type: 2}
 --- !u!1001 &987698933
 Prefab:
   m_ObjectHideFlags: 0
