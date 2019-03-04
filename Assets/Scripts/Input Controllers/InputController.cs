@@ -4,16 +4,64 @@ using UnityEngine;
 
 public class InputController : MonoBehaviour {
     
-    [SerializeField]
-    protected int playerNum;
+    public int playerNum {
+        get;
+        protected set;
+    }
+    
+    public Color playerColor {
+        get;
+        protected set;
+    }
 
-    protected ShipController shipController;
+    public ShipController shipController {
+        get;
+        protected set;
+    }
 
     protected InputData inputData;
     protected bool inputDataExternallySet = false;
 
     protected virtual void Awake() {
-        shipController = GetComponent<ShipController>();
+        shipController = GetComponentInChildren<ShipController>();
+    }
+
+    protected virtual void Start() {
+        GameManager.instance.AddPlayer(this);
+    }
+
+    protected virtual void Update() {
+
+        Vector2 axisVector = new Vector2(Input.GetAxisRaw(inputData.horizontal), Input.GetAxisRaw(inputData.vertical));
+        shipController.SetAxisVector(axisVector);
+
+        bool aDown = Input.GetButton(inputData.buttonA);
+        shipController.SetA(aDown);
+
+        bool bDown = Input.GetButton(inputData.buttonB);
+        shipController.SetB(bDown);
+
+        if (Input.GetButtonDown(inputData.buttonA) || Input.GetButtonDown(inputData.buttonB)) {
+            QuickDrawManager.instance.Notify(this);
+        }
+
+    }
+
+    public void SetShip(GameObject _shipPrefab) {
+
+        GameObject weaponPrefab = shipController.Weapon;
+        Vector3 pos = shipController.transform.localPosition;
+        Quaternion rot = shipController.transform.localRotation;
+
+        Destroy(shipController.gameObject);
+
+        GameObject shipObj = Instantiate(_shipPrefab, this.transform);
+        shipController = shipObj.GetComponent<ShipController>();
+
+        shipObj.transform.localPosition = pos;
+        shipObj.transform.localRotation = rot;
+        shipController.Weapon = weaponPrefab;
+
     }
 
     public class InputData {
