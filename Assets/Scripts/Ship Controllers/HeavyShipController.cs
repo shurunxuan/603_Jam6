@@ -19,38 +19,16 @@ public class HeavyShipController : ShipController
     private void FixedUpdate()
     {
 
-        // Rotate
-        //rigidbody.MoveRotation(rigidbody.rotation + axisVector.x * -rotationSpeed * Time.fixedDeltaTime);
-
         // Thrust
-        float thrustScaleY = 0;
-        float thrustScaleX = 0;
         float thrust = 1;
-        if (InputController.InputData.Type.Joystick == inputType)
-        {
-            //thrustScaleY = aDown ? 1 : 0;
-            thrustScaleY = -axisVectorHeavy.y;
-            thrustScaleX = axisVectorHeavy.x;
-            
-
-        }
-        else if (InputController.InputData.Type.Keyboard == inputType)
-        {
-            thrustScaleY = axisVector.y;
-            thrustScaleX = axisVector.x;
-        }
-
-        
 
         if (bDown)
         {
-            Debug.Log("pew pew");
             thrust = 5;
         }
 
         if (aDown)
         {
-            Debug.Log("pew pew");
             thrust = 5;
         }
 
@@ -59,14 +37,9 @@ public class HeavyShipController : ShipController
         {
             float angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg + 270;
             rigidbody.MoveRotation(angle);
-            //transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
-
-
-
-
-        rigidbody.AddForce(Vector3.up * thrustScaleY * thrustStrength * Time.fixedDeltaTime * thrust);
-        rigidbody.AddForce(Vector3.right * thrustScaleX * thrustStrength * Time.fixedDeltaTime * thrust);
+        
+        rigidbody.AddForce(axisVector * thrustStrength * Time.fixedDeltaTime * thrust);
 
     }
 }

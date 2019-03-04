@@ -144,16 +144,13 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da7dfadbccbddfc4c8b036fbeab73b95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   players:
   - {fileID: 996298954}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
   ScreenAspectRatio: 0
   smoothDamp: 0.5
@@ -317,7 +314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quickDrawCavas: {fileID: 1283135608}
-  timeBetweenQuickDraws: 10
+  timeBetweenQuickDraws: 5
   rewardPrefabs:
   - {fileID: 1098015486763970, guid: 1b580f401bad9b14c818babbb3373469, type: 2}
   - {fileID: 1680188554461206, guid: f7cf14a2bf82e764aa8ad9321bea5975, type: 2}

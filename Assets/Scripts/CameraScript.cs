@@ -11,7 +11,6 @@ public class CameraScript : MonoBehaviour
     private Vector3 velocity;
     private void Start()
     {
-        Debug.Log(Screen.width + "   " + Screen.height);
         ScreenAspectRatio = (float)Screen.width / (float)Screen.height;
     }
     private void LateUpdate()

@@ -31,7 +31,7 @@ public class InputController : MonoBehaviour {
     }
 
     protected virtual void Update() {
-
+        
         Vector2 axisVector = new Vector2(Input.GetAxisRaw(inputData.horizontal), Input.GetAxisRaw(inputData.vertical));
         shipController.SetAxisVector(axisVector);
 
