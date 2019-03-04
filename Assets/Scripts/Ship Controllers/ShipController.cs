@@ -69,8 +69,19 @@ public abstract class ShipController : MonoBehaviour {
         if (HitPoint <= 0)
         {
             Debug.Log(name + " Died!");
-            Destroy(gameObject);
+            StartCoroutine(Respawn());
         }
+    }
+
+    private IEnumerator Respawn() {
+
+        weapon = GameManager.instance.defaultWeaponPrefab;
+        transform.parent.GetComponent<InputController>().SetShip(GameManager.instance.defaultShipPrefab);
+
+        this.gameObject.SetActive(false);
+        yield return new WaitForSeconds(2);
+        this.gameObject.SetActive(true);
+
     }
 
 }

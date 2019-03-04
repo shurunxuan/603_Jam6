@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour {
         private set;
     }
 
+    public GameObject defaultShipPrefab;
+    public GameObject defaultWeaponPrefab;
+
     public Dictionary<int, InputController> players = new Dictionary<int, InputController>();
 
     public void AddPlayer(InputController _inputController) {
