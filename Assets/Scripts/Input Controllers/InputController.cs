@@ -6,7 +6,7 @@ public class InputController : MonoBehaviour {
     
     public int playerNum {
         get;
-        protected set;
+        set;
     }
     
     public Color playerColor {
@@ -22,12 +22,17 @@ public class InputController : MonoBehaviour {
     protected InputData inputData;
     protected bool inputDataExternallySet = false;
 
+    private Vector3 spawnPosition;
+    private Quaternion spawnRotation;
+
     protected virtual void Awake() {
         shipController = GetComponentInChildren<ShipController>();
     }
 
     protected virtual void Start() {
         GameManager.instance.AddPlayer(this);
+        spawnPosition = shipController.transform.position;
+        spawnRotation = shipController.transform.rotation;
     }
 
     protected virtual void Update() {
@@ -47,7 +52,7 @@ public class InputController : MonoBehaviour {
 
     }
 
-    public void SetShip(GameObject _shipPrefab) {
+    public ShipController SetShip(GameObject _shipPrefab) {
 
         GameObject weaponPrefab = shipController.Weapon;
         Vector3 pos = shipController.transform.localPosition;
@@ -61,6 +66,24 @@ public class InputController : MonoBehaviour {
         shipObj.transform.localPosition = pos;
         shipObj.transform.localRotation = rot;
         shipController.Weapon = weaponPrefab;
+        return shipController;
+
+    }
+
+    public void Respawn() {
+        StartCoroutine(RespawnCR());
+    }
+
+    private IEnumerator RespawnCR() {
+        
+        SetShip(GameManager.instance.defaultShipPrefab);
+        shipController.Weapon = GameManager.instance.defaultWeaponPrefab;
+        
+        shipController.gameObject.SetActive(false);
+        shipController.transform.position = spawnPosition;
+        shipController.transform.rotation = spawnRotation;
+        yield return new WaitForSeconds(5);
+        shipController.gameObject.SetActive(true);
 
     }
 

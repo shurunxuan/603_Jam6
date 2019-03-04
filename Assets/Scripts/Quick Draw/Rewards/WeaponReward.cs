@@ -7,7 +7,10 @@ public class WeaponReward : Reward {
     public GameObject weaponPrefab;
 
     public override void ApplyTo(InputController _player) {
-        _player.GetComponentInChildren<ShipController>().Weapon = weaponPrefab;
+        ShipController sc = _player.GetComponentInChildren<ShipController>();
+        if (sc != null) {
+            sc.Weapon = weaponPrefab;
+        }
         Destroy(this.gameObject);
     }
 
