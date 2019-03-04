@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4079044200569038}
   m_Layer: 0
-  m_Name: AnotherSpawner
+  m_Name: DoubleShotSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
