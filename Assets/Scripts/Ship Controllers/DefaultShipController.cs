@@ -30,7 +30,9 @@ public class DefaultShipController : ShipController {
         rigidbody.AddForce(transform.up * thrustScale * thrustStrength * Time.fixedDeltaTime);
         
         foreach (var weapon in weaponInstances) {
-            weapon.SetActive(bDown);
+            foreach (ProjectileSpawner s in weapon.GetComponentsInChildren<ProjectileSpawner>()) {
+                s.SetIsShooting(bDown);
+            }
         }
 
     }

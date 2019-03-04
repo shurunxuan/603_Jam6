@@ -42,7 +42,7 @@ public abstract class ShipController : MonoBehaviour {
             weaponInstances[i] = Instantiate(Weapon, WeaponSlots[i]);
             weaponInstances[i].transform.localPosition = Vector3.zero;
             weaponInstances[i].transform.localRotation = Quaternion.identity;
-            weaponInstances[i].SetActive(false);
+            weaponInstances[i].SetActive(true);
         }
 
     }

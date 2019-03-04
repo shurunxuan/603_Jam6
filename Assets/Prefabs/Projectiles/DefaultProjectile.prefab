@@ -108,9 +108,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shooter: {fileID: 0}
-  LifeTime: 1
+  LifeTime: 0.5
   Damage: 5
-  speed: 5
+  speed: 10
 --- !u!212 &212746786574262766
 SpriteRenderer:
   m_ObjectHideFlags: 1

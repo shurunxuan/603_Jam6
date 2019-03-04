@@ -10,16 +10,17 @@ public class ProjectileSpawner : MonoBehaviour {
 	public GameObject ProjectilePrefab;
 
 	private float timer;
+    private bool isShooting;
 
 	// Use this for initialization
 	void Start () {
-		timer = Interval + Offset;
+		timer = Offset;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		timer -= Time.deltaTime;
-		if (timer < 0)
+		if (timer < 0 && isShooting)
 		{
 			GameObject newProjectile = Instantiate(ProjectilePrefab);
 
@@ -32,4 +33,10 @@ public class ProjectileSpawner : MonoBehaviour {
 			timer = Interval;
 		}
 	}
+
+    public void SetIsShooting(bool _isShooting) {
+        isShooting = _isShooting;
+        if (isShooting && timer < 0) timer = Offset;
+    }
+
 }
