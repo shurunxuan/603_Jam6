@@ -60,6 +60,14 @@ public class QuickDrawManager : MonoBehaviour {
 
     private IEnumerator QuickDraw() {
 
+        quickDrawCavas.SetCountdown("3", true);
+        yield return new WaitForSeconds(1);
+        quickDrawCavas.SetCountdown("2", true);
+        yield return new WaitForSeconds(1);
+        quickDrawCavas.SetCountdown("1", true);
+        yield return new WaitForSeconds(1);
+        quickDrawCavas.SetCountdown("#", false);
+
         respondedPlayers = new List<InputController>();
         indexOfLastPlayerProcessed = -1;
 
