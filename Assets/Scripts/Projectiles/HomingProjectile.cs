@@ -40,6 +40,9 @@ public class HomingProjectile : Projectile {
             // Skip our shooter
             if (player == shooter.transform.root.GetComponent<InputController>()) continue;
 
+            if (player.shipController == null) continue;
+            if (!player.shipController.gameObject.activeSelf) continue;
+
             Vector2 potentialTargetPos = player.shipController.transform.position;
             Vector2 currentPos = this.transform.position;
             float distance = Vector2.Distance(potentialTargetPos, currentPos);
