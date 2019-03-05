@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -65,6 +66,10 @@ public class GameManager : MonoBehaviour {
     private IEnumerator PlayGame() {
         Debug.Log("Playing Game");
         while (true) {
+            if(Input.GetKey(KeyCode.Escape))
+            {
+                SceneManager.LoadScene("CreditScreen");
+            }
             yield return null;
         }
     }
