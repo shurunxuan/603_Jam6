@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1668e9b870056724cae8e7ebacc12140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Interval: 2
+  Interval: 1
   Offset: 0
   ProjectilePrefab: {fileID: 1621990600580334, guid: ae00d7100a5e0504db3667f83fbc8e1c,
     type: 2}

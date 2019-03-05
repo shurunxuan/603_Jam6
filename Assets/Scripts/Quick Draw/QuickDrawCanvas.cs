@@ -8,6 +8,7 @@ public class QuickDrawCanvas : MonoBehaviour {
     public Transform singleHolder;
     public GameObject blackBackdrop;
     public Image chip;
+    public Text text;
 
     public void SetRewards(List<Reward> _rewards) {
         
@@ -27,6 +28,12 @@ public class QuickDrawCanvas : MonoBehaviour {
     {
         chip.color = _color;
         chip.gameObject.SetActive(_isOn);
+    }
+
+    public void SetCountdown(string _string, bool _visible)
+    {
+        text.text = _string;
+        text.gameObject.SetActive(_visible);
     }
 
 }
