@@ -380,9 +380,10 @@ MonoBehaviour:
   - {fileID: 4002970675028728}
   - {fileID: 4904558972593044}
   - {fileID: 4026333874816756}
+  dieEffectPrefab: {fileID: 1730415551766088, guid: a742fb4b028b9b84ea776af9b93b1eff,
+    type: 2}
   rotationSpeed: 50
   thrustStrength: 150
-  thruster: {fileID: 0}
 --- !u!114 &114897580916850364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -394,6 +395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96c0c6a1a534f024e911f75dff8f26f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  willBeDestroy: 0
 --- !u!212 &212452879790532138
 SpriteRenderer:
   m_ObjectHideFlags: 1

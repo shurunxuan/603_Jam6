@@ -110,6 +110,8 @@ MonoBehaviour:
   shooter: {fileID: 0}
   LifeTime: 4
   Damage: 1
+  explodeEffectPrefab: {fileID: 1235594884846440, guid: 39e50e6adc3283c4ca4aed8a4c609cdc,
+    type: 2}
   speed: 4
 --- !u!212 &212960876733356868
 SpriteRenderer:

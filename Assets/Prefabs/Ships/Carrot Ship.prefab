@@ -200,9 +200,10 @@ MonoBehaviour:
   HitPoint: 0
   weapon: {fileID: 1930970343616630, guid: 776f606a18ed1ec499dffb3737dd145a, type: 2}
   WeaponSlots: []
+  dieEffectPrefab: {fileID: 1730415551766088, guid: a742fb4b028b9b84ea776af9b93b1eff,
+    type: 2}
   rotationSpeed: 200
   thrustStrength: 250
-  thruster: {fileID: 0}
 --- !u!114 &114252239491969660
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -214,6 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96c0c6a1a534f024e911f75dff8f26f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  willBeDestroy: 0
 --- !u!212 &212268011864464884
 SpriteRenderer:
   m_ObjectHideFlags: 1
