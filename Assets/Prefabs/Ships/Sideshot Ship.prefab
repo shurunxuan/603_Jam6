@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17db7fc6481e4a048ac36aeb2ef7f383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HitPoint: 0
+  HitPoint: 50
   weapon: {fileID: 1930970343616630, guid: 776f606a18ed1ec499dffb3737dd145a, type: 2}
   WeaponSlots:
   - {fileID: 4796557913329808}

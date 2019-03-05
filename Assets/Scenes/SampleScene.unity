@@ -196,10 +196,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   players:
-  - {fileID: 996298954}
+  - {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
   ScreenAspectRatio: 0
   smoothDamp: 0.5
+  buffer: 2
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0

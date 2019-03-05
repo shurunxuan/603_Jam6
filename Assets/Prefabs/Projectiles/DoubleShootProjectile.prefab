@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4662975761959112}
   - component: {fileID: 114002948526405280}
+  - component: {fileID: 61892564142414580}
   m_Layer: 0
   m_Name: DoubleShootProjectile
   m_TagString: Untagged
@@ -36,7 +37,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4957264731769262}
   - component: {fileID: 212114977798497080}
-  - component: {fileID: 61056825638882038}
   m_Layer: 0
   m_Name: Projectiles-1_1
   m_TagString: Untagged
@@ -51,7 +51,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1441375190790948}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5099324, y: -8.636818, z: 0}
+  m_LocalPosition: {x: -0.047618125, y: -0.06531538, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 4957264731769262}
@@ -71,19 +71,19 @@ Transform:
   m_Father: {fileID: 4662975761959112}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61056825638882038
+--- !u!61 &61892564142414580
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1853296105301496}
+  m_GameObject: {fileID: 1441375190790948}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.002182126, y: -0.0024224445}
+  m_Offset: {x: -0.00044780597, y: -0.002422452}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -94,7 +94,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.12663406, y: 0.37769955}
+  m_Size: {x: 0.13189393, y: 0.37769955}
   m_EdgeRadius: 0
 --- !u!114 &114002948526405280
 MonoBehaviour:
