@@ -70,6 +70,7 @@ public class QuickDrawManager : MonoBehaviour {
 
         // Pause game
         Time.timeScale = 0;
+        quickDrawCavas.SetBackdrop(true);
 
         // Wait for play input
         readyToEndQuickDraw = false;
@@ -89,8 +90,16 @@ public class QuickDrawManager : MonoBehaviour {
             if (r != null) Destroy(r.gameObject);
         }
 
+        // Wait a few seconds
+        startTime = Realtime.time;
+        while (Realtime.time - startTime < 3)
+        {
+            yield return null;
+        }
+
         // Resume game
         Time.timeScale = 1f;
+        quickDrawCavas.SetBackdrop(false);
 
     }
 

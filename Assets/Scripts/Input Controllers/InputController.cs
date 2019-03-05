@@ -8,16 +8,20 @@ public class InputController : MonoBehaviour {
         get;
         set;
     }
-    
-    public Color playerColor {
-        get;
-        protected set;
-    }
+
+    public Color playerColor;
 
     public ShipController shipController {
         get;
         protected set;
     }
+
+    [SerializeField]
+    private GameObject arrowPrefab;
+    private GameObject arrow;
+
+    [SerializeField]
+    private float arrowHeight;
 
     protected InputData inputData;
     protected bool inputDataExternallySet = false;
@@ -30,9 +34,15 @@ public class InputController : MonoBehaviour {
     }
 
     protected virtual void Start() {
+
         GameManager.instance.AddPlayer(this);
         spawnPosition = shipController.transform.position;
         spawnRotation = shipController.transform.rotation;
+
+        arrow = Instantiate(arrowPrefab, this.transform);
+        arrow.transform.eulerAngles = Vector3.zero;
+        arrow.GetComponent<SpriteRenderer>().color = playerColor;
+
     }
 
     protected virtual void Update() {
@@ -48,6 +58,15 @@ public class InputController : MonoBehaviour {
 
         if (Input.GetButtonDown(inputData.buttonA) || Input.GetButtonDown(inputData.buttonB)) {
             QuickDrawManager.instance.Notify(this);
+        }
+
+        if (shipController != null)
+        {
+            if (!arrow.gameObject.activeSelf) arrow.gameObject.SetActive(true);
+            arrow.transform.position = shipController.transform.position + Vector3.up * arrowHeight;
+        } else
+        {
+            if (arrow.gameObject.activeSelf) arrow.gameObject.SetActive(false);
         }
 
     }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class QuickDrawCanvas : MonoBehaviour {
 
     public Transform singleHolder;
-    public Transform multiHolder;
+    public GameObject blackBackdrop;
 
     public void SetRewards(List<Reward> _rewards) {
         
@@ -14,6 +14,11 @@ public class QuickDrawCanvas : MonoBehaviour {
             o.transform.SetParent(singleHolder);
         }
 
+    }
+
+    public void SetBackdrop(bool _isOn)
+    {
+        blackBackdrop.SetActive(_isOn);
     }
 
 }
