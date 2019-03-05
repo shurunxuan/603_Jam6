@@ -9,44 +9,32 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1098015486763970}
+  m_RootGameObject: {fileID: 1453282857593298}
   m_IsPrefabAsset: 1
---- !u!1 &1098015486763970
+--- !u!1 &1453282857593298
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 224508401078688752}
-  - component: {fileID: 222144229227833320}
-  - component: {fileID: 114262991897477584}
-  - component: {fileID: 114185692551763116}
+  - component: {fileID: 224592776691107278}
+  - component: {fileID: 222785827692080148}
+  - component: {fileID: 114596876534258582}
+  - component: {fileID: 114850539623130424}
   m_Layer: 5
-  m_Name: Mega Ship Reward
+  m_Name: Carrot Ship Reward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114185692551763116
+--- !u!114 &114596876534258582
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1098015486763970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f001095358f46e442bfcf8ccaff25fd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shipPrefab: {fileID: 1109843064094202, guid: 4996cfa86853a4b429802d9f5e8b93d0, type: 2}
---- !u!114 &114262991897477584
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1098015486763970}
+  m_GameObject: {fileID: 1453282857593298}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -60,7 +48,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300044, guid: e3cb198dbbf403a45a97d0c0caba1474, type: 3}
+  m_Sprite: {fileID: 21300052, guid: cfeb257fa2c55ed42b638e9100150b4e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -68,19 +56,31 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!222 &222144229227833320
+--- !u!114 &114850539623130424
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1453282857593298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f001095358f46e442bfcf8ccaff25fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipPrefab: {fileID: 1690820884546354, guid: f164c98bb9b0fd445b97b6e555f4ba82, type: 2}
+--- !u!222 &222785827692080148
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1098015486763970}
+  m_GameObject: {fileID: 1453282857593298}
   m_CullTransparentMesh: 0
---- !u!224 &224508401078688752
+--- !u!224 &224592776691107278
 RectTransform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1098015486763970}
+  m_GameObject: {fileID: 1453282857593298}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -91,5 +91,5 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 2500, y: -2500}
-  m_SizeDelta: {x: 135, y: 111}
+  m_SizeDelta: {x: 100, y: 215}
   m_Pivot: {x: 0.5, y: 0.5}

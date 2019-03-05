@@ -292,7 +292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Interval: 0.2
   Offset: 0
-  ProjectilePrefab: {fileID: 1754263881193942, guid: f5d196e0a3818cf42a90e843f132ab39,
+  ProjectilePrefab: {fileID: 1998414671348244, guid: 4c59b352bbaaac445827ac74c0c85595,
     type: 2}
 --- !u!114 &114248770454609560
 MonoBehaviour:
@@ -307,7 +307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Interval: 0.2
   Offset: 0
-  ProjectilePrefab: {fileID: 1754263881193942, guid: f5d196e0a3818cf42a90e843f132ab39,
+  ProjectilePrefab: {fileID: 1998414671348244, guid: 4c59b352bbaaac445827ac74c0c85595,
     type: 2}
 --- !u!114 &114263229450173222
 MonoBehaviour:
@@ -322,7 +322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Interval: 0.2
   Offset: 0
-  ProjectilePrefab: {fileID: 1754263881193942, guid: f5d196e0a3818cf42a90e843f132ab39,
+  ProjectilePrefab: {fileID: 1998414671348244, guid: 4c59b352bbaaac445827ac74c0c85595,
     type: 2}
 --- !u!114 &114429698555505870
 MonoBehaviour:
@@ -337,7 +337,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Interval: 0.2
   Offset: 0
-  ProjectilePrefab: {fileID: 1754263881193942, guid: f5d196e0a3818cf42a90e843f132ab39,
+  ProjectilePrefab: {fileID: 1998414671348244, guid: 4c59b352bbaaac445827ac74c0c85595,
     type: 2}
 --- !u!114 &114515309203757628
 MonoBehaviour:
@@ -352,7 +352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Interval: 0.2
   Offset: 0
-  ProjectilePrefab: {fileID: 1754263881193942, guid: f5d196e0a3818cf42a90e843f132ab39,
+  ProjectilePrefab: {fileID: 1998414671348244, guid: 4c59b352bbaaac445827ac74c0c85595,
     type: 2}
 --- !u!114 &114529644308603794
 MonoBehaviour:
@@ -367,7 +367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Interval: 0.2
   Offset: 0
-  ProjectilePrefab: {fileID: 1754263881193942, guid: f5d196e0a3818cf42a90e843f132ab39,
+  ProjectilePrefab: {fileID: 1998414671348244, guid: 4c59b352bbaaac445827ac74c0c85595,
     type: 2}
 --- !u!114 &114689409503205114
 MonoBehaviour:
@@ -382,7 +382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Interval: 0.2
   Offset: 0
-  ProjectilePrefab: {fileID: 1754263881193942, guid: f5d196e0a3818cf42a90e843f132ab39,
+  ProjectilePrefab: {fileID: 1998414671348244, guid: 4c59b352bbaaac445827ac74c0c85595,
     type: 2}
 --- !u!114 &114899758449241976
 MonoBehaviour:
@@ -397,5 +397,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Interval: 0.2
   Offset: 0
-  ProjectilePrefab: {fileID: 1754263881193942, guid: f5d196e0a3818cf42a90e843f132ab39,
+  ProjectilePrefab: {fileID: 1998414671348244, guid: 4c59b352bbaaac445827ac74c0c85595,
     type: 2}
