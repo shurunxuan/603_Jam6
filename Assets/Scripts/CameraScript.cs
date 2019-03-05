@@ -9,6 +9,7 @@ public class CameraScript : MonoBehaviour
     public float ScreenAspectRatio;
     public float smoothDamp = 0.5f;
     private Vector3 velocity;
+    public float buffer =2f;
     private void Start()
     {
         ScreenAspectRatio = (float)Screen.width / (float)Screen.height;
@@ -41,8 +42,8 @@ public class CameraScript : MonoBehaviour
         //Debug.DrawLine(new Vector3(bounds.min.x, bounds.min.y, 0), new Vector3(bounds.max.x, bounds.max.y, 0));
 
         center = bounds.center;
-        float bufferx = bounds.size.x + 2;
-        float buffery = bounds.size.y + 2;
+        float bufferx = bounds.size.x + buffer;
+        float buffery = bounds.size.y + buffer;
         float boundsAspectRatio = (bufferx ) / (buffery);
         float targetSize;
         if (boundsAspectRatio <= ScreenAspectRatio)
