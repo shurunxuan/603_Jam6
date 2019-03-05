@@ -10,9 +10,13 @@ public class GameManager : MonoBehaviour {
         private set;
     }
 
+    public GameObject defaultShipPrefab;
+    public GameObject defaultWeaponPrefab;
+
     public Dictionary<int, InputController> players = new Dictionary<int, InputController>();
 
     public void AddPlayer(InputController _inputController) {
+        _inputController.playerNum = players.Count;
         players.Add(_inputController.playerNum, _inputController);
         Debug.Log("Player " + _inputController.playerNum + " joined");
     }

@@ -69,7 +69,7 @@ public abstract class ShipController : MonoBehaviour {
         if (HitPoint <= 0)
         {
             Debug.Log(name + " Died!");
-            Destroy(gameObject);
+            transform.parent.GetComponent<InputController>().Respawn();
         }
     }
 
