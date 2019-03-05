@@ -51,5 +51,7 @@ public class HomingProjectile : Projectile {
         }
         rigidbody.AddForce(forceDirection * thrustStrength * Time.fixedDeltaTime);
 
+        this.transform.up = rigidbody.velocity.normalized;
+
     }
 }
