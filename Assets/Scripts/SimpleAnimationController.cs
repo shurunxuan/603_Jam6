@@ -11,7 +11,7 @@ public class SimpleAnimationController : MonoBehaviour {
     }
 
     public void OnDestroy() {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     public void PlayAnimation(string animName) {
