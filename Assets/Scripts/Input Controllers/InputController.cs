@@ -28,17 +28,29 @@ public class InputController : MonoBehaviour {
 
     private Vector3 spawnPosition;
     private Quaternion spawnRotation;
+    private Vector3 lastKnownPosition;
+
+
+    public Vector3 LastKnownPosition
+    {
+        get
+        {
+            return lastKnownPosition;
+        }
+    }
+
 
     protected virtual void Awake() {
         shipController = GetComponentInChildren<ShipController>();
     }
+
 
     protected virtual void Start() {
 
         GameManager.instance.AddPlayer(this);
         spawnPosition = shipController.transform.position;
         spawnRotation = shipController.transform.rotation;
-
+        lastKnownPosition = spawnPosition;
         arrow = Instantiate(arrowPrefab, this.transform);
         arrow.transform.eulerAngles = Vector3.zero;
         arrow.GetComponent<SpriteRenderer>().color = playerColor;
@@ -64,6 +76,7 @@ public class InputController : MonoBehaviour {
         {
             if (!arrow.gameObject.activeSelf) arrow.gameObject.SetActive(true);
             arrow.transform.position = shipController.transform.position + Vector3.up * arrowHeight;
+            lastKnownPosition = shipController.transform.position;
         } else
         {
             if (arrow.gameObject.activeSelf) arrow.gameObject.SetActive(false);
