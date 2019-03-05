@@ -11,6 +11,8 @@ public class Projectile : MonoBehaviour
 
 	public int Damage;
 
+    public GameObject explodeEffectPrefab;
+
 	void OnTriggerEnter2D(Collider2D col)
 	{
 		if (col.gameObject == null) return;
@@ -19,6 +21,10 @@ public class Projectile : MonoBehaviour
 		if (col.gameObject != shooter.transform.root.GetComponent<InputController>().shipController.gameObject)
 		{
 			col.gameObject.SendMessage("DamageDealed", Damage);
+
+            //EXPLODE!
+            Instantiate(explodeEffectPrefab, col.transform.position, Quaternion.identity);
+
 			Destroy(gameObject);
 		}
 	}

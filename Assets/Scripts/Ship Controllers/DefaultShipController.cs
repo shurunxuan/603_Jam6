@@ -10,7 +10,6 @@ public class DefaultShipController : ShipController {
     [SerializeField]
     private float thrustStrength;
 
-    [SerializeField]
     private GameObject thruster;
 
     protected override void Awake() {
