@@ -18,6 +18,9 @@ public class QuickDrawManager : MonoBehaviour {
     [SerializeField]
     private GameObject[] rewardPrefabs;
 
+    [SerializeField]
+    private GameObject chip;
+
     private float startTime;
     private bool readyToEndQuickDraw;
 
@@ -99,6 +102,7 @@ public class QuickDrawManager : MonoBehaviour {
 
         // Resume game
         Time.timeScale = 1f;
+        quickDrawCavas.SetChip(false, Color.white);
         quickDrawCavas.SetBackdrop(false);
 
     }
@@ -114,6 +118,8 @@ public class QuickDrawManager : MonoBehaviour {
         // This is for a single reward
         // Will have to change this with multi-reward quick draws
         readyToEndQuickDraw = true;
+
+        quickDrawCavas.SetChip(true, _player.playerColor);
 
     }
 
