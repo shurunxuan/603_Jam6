@@ -260,9 +260,10 @@ MonoBehaviour:
   WeaponSlots:
   - {fileID: 4796557913329808}
   - {fileID: 4071077653493146}
+  dieEffectPrefab: {fileID: 1730415551766088, guid: a742fb4b028b9b84ea776af9b93b1eff,
+    type: 2}
   rotationSpeed: 150
   thrustStrength: 200
-  thruster: {fileID: 0}
 --- !u!114 &114820368605524800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -274,6 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96c0c6a1a534f024e911f75dff8f26f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  willBeDestroy: 0
 --- !u!212 &212254173450936484
 SpriteRenderer:
   m_ObjectHideFlags: 1

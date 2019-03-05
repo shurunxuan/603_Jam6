@@ -131,8 +131,12 @@ MonoBehaviour:
   shooter: {fileID: 0}
   LifeTime: 10
   Damage: 5
+  explodeEffectPrefab: {fileID: 1235594884846440, guid: 39e50e6adc3283c4ca4aed8a4c609cdc,
+    type: 2}
   thrustStrength: 300
   initialSpeed: 3
+  trackingRange: Infinity
+  maxSpeed: Infinity
 --- !u!212 &212499807377926170
 SpriteRenderer:
   m_ObjectHideFlags: 1

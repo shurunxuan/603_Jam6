@@ -63,6 +63,8 @@ public abstract class ShipController : MonoBehaviour {
         inputType = _inputType;
     }
 
+    [SerializeField]
+    private GameObject dieEffectPrefab;
     void DamageDealed(int damage)
     {
         HitPoint -= damage;
@@ -70,6 +72,9 @@ public abstract class ShipController : MonoBehaviour {
         {
             Debug.Log(name + " Died!");
             transform.parent.GetComponent<InputController>().Respawn();
+
+            //DIE EFFECT!
+            Instantiate(dieEffectPrefab, transform.position, Quaternion.identity);
         }
     }
 
