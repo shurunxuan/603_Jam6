@@ -10,6 +10,12 @@ public class HomingProjectile : Projectile {
     [SerializeField]
     private float initialSpeed;
 
+    [SerializeField]
+    private float trackingRange = Mathf.Infinity;
+
+    [SerializeField]
+    private float maxSpeed = Mathf.Infinity;
+
     new private Rigidbody2D rigidbody;
 
     private void Awake() {
@@ -37,7 +43,7 @@ public class HomingProjectile : Projectile {
             Vector2 potentialTargetPos = player.shipController.transform.position;
             Vector2 currentPos = this.transform.position;
             float distance = Vector2.Distance(potentialTargetPos, currentPos);
-            if (distance < closestTargetDistance) {
+            if (distance < closestTargetDistance && distance < trackingRange) {
                 closestTarget = potentialTargetPos;
                 closestTargetDistance = distance;
                 closestTargetSet = true;
@@ -50,6 +56,10 @@ public class HomingProjectile : Projectile {
             forceDirection = (closestTarget - this.transform.position).normalized;
         }
         rigidbody.AddForce(forceDirection * thrustStrength * Time.fixedDeltaTime);
+
+        if (rigidbody.velocity.magnitude > maxSpeed) {
+            rigidbody.velocity = rigidbody.velocity.normalized * maxSpeed;
+        }
 
         this.transform.up = rigidbody.velocity.normalized;
 
