@@ -190,17 +190,20 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da7dfadbccbddfc4c8b036fbeab73b95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   players:
-  - {fileID: 0}
+  - {fileID: 996298952}
+  - {fileID: 510816646}
+  - {fileID: 775054011}
+  - {fileID: 1541106267}
   offset: {x: 0, y: 0, z: 0}
   ScreenAspectRatio: 0
   smoothDamp: 0.5
-  buffer: 2
+  buffer: 10
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -336,7 +339,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 775054010}
-  - component: {fileID: 775054009}
+  - component: {fileID: 775054011}
   m_Layer: 0
   m_Name: Player (2)
   m_TagString: Player
@@ -344,22 +347,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &775054009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 775054008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddf26a1fb8c5f3d44bf1fd1b236c1c9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerColor: {r: 0, g: 1, b: 0.092865944, a: 1}
-  arrowPrefab: {fileID: 1833698815634916, guid: cbe09acf6042dec42bc5ff80fed72f53,
-    type: 2}
-  arrowHeight: 0.5
-  keyboardInputType: 1
 --- !u!4 &775054010
 Transform:
   m_ObjectHideFlags: 0
@@ -374,6 +361,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!114 &775054011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 775054008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99016b160ea6eb146abc575c6fdd3d7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerColor: {r: 0, g: 1, b: 0, a: 1}
+  arrowPrefab: {fileID: 1833698815634916, guid: cbe09acf6042dec42bc5ff80fed72f53,
+    type: 2}
+  arrowHeight: 0.5
+  joyNum: 1
 --- !u!1 &850541757
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,7 +858,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1541106266}
-  - component: {fileID: 1541106265}
+  - component: {fileID: 1541106267}
   m_Layer: 0
   m_Name: Player (3)
   m_TagString: Player
@@ -863,22 +866,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1541106265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1541106264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddf26a1fb8c5f3d44bf1fd1b236c1c9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerColor: {r: 1, g: 0.99997795, b: 0, a: 1}
-  arrowPrefab: {fileID: 1833698815634916, guid: cbe09acf6042dec42bc5ff80fed72f53,
-    type: 2}
-  arrowHeight: 0.5
-  keyboardInputType: 1
 --- !u!4 &1541106266
 Transform:
   m_ObjectHideFlags: 0
@@ -893,6 +880,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1541106267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1541106264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99016b160ea6eb146abc575c6fdd3d7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerColor: {r: 1, g: 1, b: 0, a: 1}
+  arrowPrefab: {fileID: 1833698815634916, guid: cbe09acf6042dec42bc5ff80fed72f53,
+    type: 2}
+  arrowHeight: 0.5
+  joyNum: 2
 --- !u!1 &1596795864
 GameObject:
   m_ObjectHideFlags: 0
